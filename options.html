@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Initium Helper Options</title>
+  <style>
+    div.fieldGroup {
+      margin: 10px 0;
+    }
+    div.fieldGroup div {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <div class="fieldGroup">
+      <label for="campsiteName">Default campsite name:</label>
+      <input id="campsiteName" type="text">
+    </div>
+
+    <div class="fieldGroup">
+      When autolooting:<br>
+      <div>
+        <input id="lootGold" type="checkbox">
+        <label for="lootGold">Loot gold</label>
+      </div>
+      <div>
+        <input id="lootRareItems" type="checkbox">
+        <label for="lootRareItems">Loot rare items</label>
+      </div>
+    </div>
+
+    <div class="fieldGroup">
+      <button id="save" type="submit">Save</button>
+    </div>
+  </form>
+
+  <script src="options.js"></script>
+
+</body>
+</html>

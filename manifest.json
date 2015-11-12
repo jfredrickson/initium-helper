@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Initium Helper",
+  "description": "Enhanced browser support for Initium",
+  "version": "0.1.0",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://www.playinitium.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.playinitium.com/*"],
+      "css": ["initium.css"],
+      "js": ["jquery-2.1.4.min.js", "initium.js"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  }
+}
