@@ -57,16 +57,18 @@ function monkeyPatchCreateCampsite() {
 }
 
 function autoloot() {
-  if (options.lootGold) {
-    $("#main-characterlist .main-item-controls a:contains('gold')").each(function () {
-      $(this)[0].click();
-    });
-  }
   if (options.lootRareItems) {
     $("#main-itemlist .main-item-container a.item-rare, #main-itemlist .main-item-container a.item-unique").closest("div").find(".main-item-controls a").each(function () {
       $(this)[0].click();
     });
   }
+  setTimeout(function () {
+    if (options.lootGold) {
+      $("#main-characterlist .main-item-controls a:contains('gold')").each(function () {
+        $(this)[0].click();
+      });
+    }
+  }, 250);
 }
 
 $(document).ready(function () {
