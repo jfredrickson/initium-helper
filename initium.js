@@ -63,7 +63,7 @@ function autoloot() {
     });
   }
   if (options.lootRareItems) {
-    $("#main-itemlist .main-item-container a.item-rare").closest("div").find(".main-item-controls a").each(function () {
+    $("#main-itemlist .main-item-container a.item-rare, #main-itemlist .main-item-container a.item-unique").closest("div").find(".main-item-controls a").each(function () {
       $(this)[0].click();
     });
   }
